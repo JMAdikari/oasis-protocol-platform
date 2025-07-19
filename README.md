@@ -86,6 +86,42 @@ Oasis Protocol Platform is designed to facilitate:
 - Achievement unlocking
 - Anti-cheating measures
 
+## 🖼️ User Interfaces
+
+Home
+
+<p align="center"> <img src="Assests/Home.png" alt="Home" width="600" height="400"/> </p>
+
+Leaderboard
+
+<p align="center"> <img src="Assests/Leaderboard.png" alt="Leaderboard" width="600" height="400"/> </p>
+
+Team Register
+
+<p align="center"> <img src="Assests/Team Register.png" alt="Team Register" width="600" height="400"/> </p>
+
+Team Login
+
+<p align="center"> <img src="Assests/Team login.png" alt="Team Login" width="600" height="400"/> </p>
+
+Challenges
+
+<p align="center"> <img src="Assests/challenges.png" alt="Challenges" width="600" height="400"/> </p>
+
+Admin Login
+
+<p align="center"> <img src="Assests/Admin login.png" alt="Admin Login" width="600" height="400"/> </p>
+
+Challenge Management
+
+<p align="center"> <img src="Assests/Challenege Management.png" alt="Challenge Management" width="600" height="400"/> </p>
+
+Team Management
+
+<p align="center"> <img src="Assests/Team Management.png" alt="Team Management" width="600" height="400"/> </p>
+
+
+
 ## 🛠️ Technology Stack
 
 ### Backend (.NET 8.0)
@@ -124,186 +160,22 @@ Oasis Protocol Platform is designed to facilitate:
         └── services/     # API services
 ```
 
-## 🚦 Getting Started
 
-### Prerequisites
-- .NET 8.0 SDK
-- Node.js (Latest LTS version)
-- SQL Server
-- Visual Studio / VS Code
+## Team Members
 
-### Backend Setup
-1. Clone the repository:
-   ```powershell
-   git clone https://github.com/JMAdikari/oasis-protocol-platform.git
-   cd oasis-protocol-platform/Back-end
-   ```
+<div align="left">
 
-2. Update the connection string in `appsettings.json`:
-   ```json
-   {
-     "ConnectionStrings": {
-       "DefaultConnection": "Server=YOUR_SERVER;Database=OasisDB;Trusted_Connection=True;MultipleActiveResultSets=true"
-     }
-   }
-   ```
+| <img src="https://github.com/mlswijerathne.png" width="50px" height="50px"/> | <img src="https://avatars.githubusercontent.com/u/139224455?v=4" width="50px" height="50px"/> |
+|:-------------------------:|:-------------------------:|
+| **Lakshitha Wijerathne** | **Jayani Adikari** |
+| [@mlswijerathne](https://github.com/mlswijerathne) | [@JMAdikari](https://github.com/JMAdikari) |
 
-3. Install .NET dependencies:
-   ```powershell
-   dotnet restore
-   ```
-
-4. Run database migrations:
-   ```powershell
-   dotnet ef database update
-   ```
-
-5. Initialize the database with sample data (optional):
-   ```powershell
-   dotnet run /seed
-   ```
-
-6. Start the backend:
-   ```powershell
-   dotnet run
-   ```
-
-The backend will start running on `https://localhost:7123` by default.
-
-### Frontend Setup
-1. Navigate to the Front-end directory:
-   ```powershell
-   cd ../Front-end
-   ```
-
-2. Create a `.env` file in the root directory:
-   ```env
-   REACT_APP_API_URL=https://localhost:7123/api
-   REACT_APP_ENV=development
-   ```
-
-3. Install dependencies:
-   ```powershell
-   npm install
-   ```
-
-4. Run the development server:
-   ```powershell
-   npm start
-   ```
-
-The frontend will start running on `http://localhost:3000`.
-
-### Build for Production
-1. Build the frontend:
-   ```powershell
-   npm run build
-   ```
-
-2. Build the backend:
-   ```powershell
-   cd ../Back-end
-   dotnet publish -c Release
-   ```
-
-## 🔐 Security Features
-
-### Authentication & Authorization
-- JWT-based authentication with refresh tokens
-- Password hashing with BCrypt (cost factor 12)
-- Role-based access control (RBAC)
-- Email verification requirement
-- Password complexity requirements
-- Account lockout after failed attempts
-
-### API Security
-- HTTPS enforcement
-- CORS policy configuration
-- Rate limiting
-- Request size limiting
-- Input validation and sanitization
-- SQL injection prevention
-- XSS protection
-
-### Data Protection
-- Encrypted data transmission
-- Secure password storage
-- Session management
-- Audit logging
-- Data backup and recovery
-- GDPR compliance measures
-
-### Infrastructure Security
-- Regular security updates
-- Firewall configuration
-- DDoS protection
-- Secure file upload handling
-- Environment-based configurations
-- Secrets management
-
-## 🌐 API Endpoints
-
-### Authentication Endpoints
-- POST `/api/auth/register` - User registration
-- POST `/api/auth/login` - User login
-- POST `/api/auth/refresh` - Refresh token
-- POST `/api/auth/verify-email` - Email verification
-
-### User Management Endpoints
-- GET `/api/users` - Get all users
-- GET `/api/users/{id}` - Get user by ID
-- PUT `/api/users/{id}` - Update user
-- DELETE `/api/users/{id}` - Delete user
-- GET `/api/users/profile` - Get current user profile
-
-### Challenge Endpoints
-- GET `/api/challenges` - List all challenges
-- GET `/api/challenges/{id}` - Get challenge details
-- POST `/api/challenges` - Create new challenge
-- PUT `/api/challenges/{id}` - Update challenge
-- DELETE `/api/challenges/{id}` - Delete challenge
-- GET `/api/challenges/{id}/submissions` - Get challenge submissions
-
-### Team Management Endpoints
-- POST `/api/teams` - Create team
-- GET `/api/teams` - List teams
-- GET `/api/teams/{id}` - Get team details
-- PUT `/api/teams/{id}` - Update team
-- DELETE `/api/teams/{id}` - Delete team
-- POST `/api/teams/{id}/members` - Add team member
-- DELETE `/api/teams/{id}/members/{userId}` - Remove team member
-
-### Submission Endpoints
-- POST `/api/submissions` - Submit solution
-- GET `/api/submissions/{id}` - Get submission details
-- GET `/api/submissions/user/{userId}` - Get user submissions
-- GET `/api/submissions/team/{teamId}` - Get team submissions
-
-### Leaderboard Endpoints
-- GET `/api/leaderboard` - Get global leaderboard
-- GET `/api/leaderboard/teams` - Get team leaderboard
-- GET `/api/leaderboard/users` - Get individual leaderboard
-- GET `/api/leaderboard/challenge/{challengeId}` - Get challenge-specific leaderboard
-
-### Flag Endpoints
-- POST `/api/flags/submit` - Submit flag
-- GET `/api/flags/status` - Get flag submission status
-- GET `/api/flags/challenge/{challengeId}` - Get challenge flags
-
-## 👥 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+</div>
 
 ## 🤝 Contact
 
-JMAdikari - [GitHub Profile](https://github.com/JMAdikari)
+Lakshitha Wijerathne - [GitHub Profile](https://github.com/mlswijerathne)
 
-Project Link: [https://github.com/JMAdikari/oasis-protocol-platform](https://github.com/JMAdikari/oasis-protocol-platform)
+Jayani Adikari - [GitHub Profile](https://github.com/JMAdikari)
+
+
